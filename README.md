@@ -1,6 +1,12 @@
 AzureRM Terraform Provider
 ==================
 
+## ATA Notes ##
+
+This project expects to use scripts from https://github.com/Microsoft/openshift-origin. That had some issues so I forked it here https://github.com/ATALLC/openshift-origin. So clone that and then there's an openshift_script_path that's being overrided in ata.auto.tfvars and you can specify the path on your local box. To access the vms, the ssh key as well as other access details is in https://www.dropbox.com/home/ATA-Internal-DevOps/Projects/SOSOA?preview=terraform-example-openshift.tfvars.gpg. Ask Mike about the password. It can be decrypted with the command "gpg -d <file>".
+
+There's a script in the utility-scripts project called add-vms-to-etc-hosts.sh that will put any public ips of vms in our azure subscription into /etc/hosts to make it easier to ssh in. Terraform sets up a bastion vm that has a public ip and can be used to ssh to the other vms, although you may need to copy the private key into it first.
+
 - Website: https://www.terraform.io
 - [![Gitter chat](https://badges.gitter.im/hashicorp-terraform/Lobby.png)](https://gitter.im/hashicorp-terraform/Lobby)
 - Mailing list: [Google Groups](http://groups.google.com/group/terraform-tool)
