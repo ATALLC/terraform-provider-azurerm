@@ -7,7 +7,7 @@ This project expects to use scripts from https://github.com/Microsoft/openshift-
 
 There's a script in the utility-scripts project called add-vms-to-etc-hosts.sh that will put any public ips of vms in our azure subscription into /etc/hosts to make it easier to ssh in. Terraform sets up a bastion vm that has a public ip and can be used to ssh to the other vms, although you may need to copy the private key into it first.
 
-Got the installer working but the nodes besides master were not showing up with "oc get nodes" for some reason. Had to follow[the scaleup instructions](https://docs.openshift.com/enterprise/3.0/install_config/install/advanced_install.html#adding-nodes-advanced) to get them to show up.
+Got the installer working but the nodes besides master were not showing up with "oc get nodes" for some reason. Had to follow [the scaleup instructions](https://docs.openshift.com/enterprise/3.0/install_config/install/advanced_install.html#adding-nodes-advanced) to get them to show up.
 
 - Website: https://www.terraform.io
 - [![Gitter chat](https://badges.gitter.im/hashicorp-terraform/Lobby.png)](https://gitter.im/hashicorp-terraform/Lobby)
